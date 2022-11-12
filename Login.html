@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="index.html">
+    <link rel="stylesheet" href="test.css">
+    
+    <title>TEST LOGIN</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <form name="frmlogin" action="" id="form-login" onsubmit="return kiemtra()">
+            <h1 class="form-heading">Form đăng nhập</h1>
+            <div class="form-group">
+                <i class="far fa-user"></i>
+                <input type="text" name="u" id="un" placeholder="Tên đăng nhập">
+            </div>
+            <div class="form-group">
+                <i class="fas fa-key"></i>
+                <input type="password" name="p" id="pw" placeholder="Mật khẩu">
+                <div id="eye">
+                    <i class="far fa-eye"></i>
+                </div>
+            </div>
+            <input type="submit" value="Đăng nhập" class="form-submit">
+            <br>
+            <br>
+            <h4 id="baoloi" style="color:white;"></h4>
+        </form>
+        <script>
+            function kiemtra(){
+                var u = document.frmlogin.u.value;
+                var p = document.frmlogin.p.value;
+                if (u=="") {
+                    document.getElementById("baoloi").innerHTML="Mời bạn nhập user name";
+                    return false;
+                }
+                if (p=="") {
+                    document.getElementById("baoloi").innerHTML="Mời bạn nhập password";
+                    return false;
+                }
+                return true;
+            }
+            </script>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="js/app.js"></script>
+</html>
